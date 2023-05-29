@@ -41,6 +41,9 @@ function find(query) {
 }
 
 
+function count(query) {
+    return dao.count(query)
+}
 
 const agg = (pipe = []) => dao.aggregate(pipe);
 
@@ -52,7 +55,8 @@ module.exports = {
     agg,
     deleteByKey,
     updateByKey,
-    find
+    find,
+    count
 
 };
 
